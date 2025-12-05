@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NotiWave</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-blur"></div>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="logo-circle">🔔</div>
+      <div class="header-text">
+        <h1>NotiWave</h1>
+        <p>Play with the Web Notification API in a minimal, modern playground.</p>
+      </div>
+    </header>
+
+    <main class="card">
+      <section class="status-row">
+        <span class="status-label">Permission:</span>
+        <span id="permission-badge" class="badge badge-pending">Not requested</span>
+      </section>
+
+      <section class="buttons-row">
+        <button id="enable-btn" class="btn primary">
+          <span class="btn-icon">✅</span>
+          Enable Notifications
+        </button>
+
+        <button id="notify-btn" class="btn ghost" disabled>
+          <span class="btn-icon">👋</span>
+          Send Notification
+        </button>
+      </section>
+
+      <section class="info-panel">
+        <h2>How it works</h2>
+        <ol>
+          <li>Click <strong>Enable Notifications</strong> to ask the browser for permission.</li>
+          <li>If permission is <strong>granted</strong>, the send button unlocks.</li>
+          <li>Click <strong>Send Notification</strong> to show “👋 Hey there!” as a native notification.</li>
+        </ol>
+      </section>
+
+      <p id="support-text" class="support-text"></p>
+
+      <div id="toast" class="toast hidden"></div>
+    </main>
+
+    <footer class="app-footer">
+      <span>Built with the <code>Notification</code> API</span>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
