@@ -67,7 +67,7 @@ notifyBtn.addEventListener("click", () => {
 
   if (Notification.permission === "granted") {
     new Notification("👋 Hey there!", {
-      body: "This is your simple notification from the Notification Clicker.",
+      body: "This is your simple notification from the NotiWave.",
     });
     showToast("Notification sent!");
   } else {
